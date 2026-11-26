@@ -1,27 +1,27 @@
 ---
 import { Icon } from 'astro-icon/components';
 ---
-<header class="w-full bg-[#0f0f0f] px-6 py-4 flex items-center justify-between font-sans">
+<header class="w-full bg-surface-container-lowest px-6 py-4 flex items-center justify-between font-sans">
   
   <div class="shrink-0">
-    <a href="/" class="text-[#e5e5e5] text-xl md:text-2xl font-serif tracking-wide hover:opacity-80 transition-opacity">
+    <a href="/" class="text-on-surface text-xl md:text-2xl font-serif tracking-wide hover:opacity-80 transition-opacity">
       Idaisel Guevara
     </a>
   </div>
 
   <div class="flex items-center gap-4">
    
-    <div class="bg-[#1a1a1a] p-1 rounded-full flex items-center border border-white/5">
-      <button class="px-3 py-1 text-xs font-semibold rounded-full bg-[#d4c4a8] text-[#1a1a1a] transition-colors">
+    <div class="bg-surface-container-low p-1 rounded-full flex items-center border border-on-surface/5">
+      <button class="px-3 py-1 text-xs font-semibold rounded-full bg-primary-container text-on-primary-container transition-colors">
         ES
       </button>
-      <button class="px-3 py-1 text-xs font-semibold rounded-full text-gray-400 hover:text-white transition-colors">
+      <button class="px-3 py-1 text-xs font-semibold rounded-full text-on-surface-variant hover:text-on-surface transition-colors">
         EN
       </button>
     </div>
 
-    <button class="bg-[#d4c4a8] p-2 rounded-xl hover:bg-[#c4b498] transition-colors group">
-      <Icon name="lucide:user" class="w-5 h-5 text-[#1a1a1a]" />
+    <button class="bg-primary-container p-2 rounded-xl hover:bg-primary transition-colors group">
+      <Icon name="lucide:user" class="w-5 h-5 text-on-primary-container" />
     </button>
 
   </div>
