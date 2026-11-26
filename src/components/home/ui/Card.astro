@@ -1,0 +1,50 @@
+---
+type CardElement = "div" | "article" | "aside" | "section" | "li" | "figure";
+
+interface Props {
+  as?: CardElement;
+  class?: string;
+  padding?: "none" | "sm" | "md" | "lg";
+  tone?: "lowest" | "low" | "base" | "high";
+  hover?: boolean;
+  [key: string]: unknown;
+}
+
+const {
+  as = "div",
+  class: className,
+  padding = "md",
+  tone = "low",
+  hover = false,
+  ...rest
+} = Astro.props;
+
+const Tag = as;
+
+const paddings = {
+  none: "",
+  sm: "p-6",
+  md: "p-8",
+  lg: "p-10",
+} as const;
+
+const tones = {
+  lowest: "bg-surface-container-lowest",
+  low: "bg-surface-container-low",
+  base: "bg-surface-container",
+  high: "bg-surface-container-high",
+} as const;
+---
+
+<Tag
+  class:list={[
+    "relative overflow-hidden rounded-lg",
+    tones[tone],
+    paddings[padding],
+    hover && "transition-colors duration-300 hover:bg-surface-container",
+    className,
+  ]}
+  {...rest}
+>
+  <slot />
+</Tag>

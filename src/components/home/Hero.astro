@@ -1,0 +1,89 @@
+---
+import { Icon } from "astro-icon/components";
+import Card from "./ui/Card.astro";
+---
+
+<div class="relative w-full overflow-hidden bg-surface">
+  <!-- Contained architectural glow -->
+  <div
+    class="pointer-events-none absolute -top-40 right-1/4 h-[500px] w-[500px] rounded-full bg-primary/5 blur-[120px]"
+    aria-hidden="true"
+  >
+  </div>
+  <div
+    class="pointer-events-none absolute top-1/2 -left-48 h-[420px] w-[420px] rounded-full bg-surface-container-high/40 blur-[100px]"
+    aria-hidden="true"
+  >
+  </div>
+
+  <section
+    aria-labelledby="hero-title"
+    class="relative mx-auto flex w-full max-w-[1440px] flex-col justify-between px-5 pt-16 pb-24 md:px-10 md:pt-24 md:pb-36 lg:px-16 lg:pt-32 lg:pb-44"
+  >
+    <!-- Micro-metadata bar -->
+    <div class="flex flex-wrap items-center justify-between gap-y-4 pb-12">
+      <div class="flex items-center gap-3">
+        <span
+          class="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-primary motion-reduce:animate-none"
+          aria-hidden="true"></span>
+        <p class="text-[0.6875rem] font-semibold uppercase tracking-[0.2em] text-primary">
+          Adquisiciones estratégicas · Dossier privado
+        </p>
+      </div>
+      <div
+        class="flex items-center gap-6 text-[0.6875rem] font-semibold uppercase tracking-widest text-on-surface-variant"
+      >
+        <span>Ref. B2B / Suministros</span>
+        <span class="h-px w-8 bg-white/[0.08]" aria-hidden="true"></span>
+        <span>MMXXV</span>
+      </div>
+    </div>
+
+    <!-- Headline and dossier -->
+    <div class="grid grid-cols-1 items-end gap-6 pt-6 md:pt-12 lg:grid-cols-12 lg:gap-10">
+      <div class="flex flex-col lg:col-span-8">
+        <h1
+          id="hero-title"
+          class="font-display text-[3.25rem] font-normal leading-[1.02] tracking-[-0.03em] text-on-surface md:text-[5.5rem] lg:text-[7.25rem]"
+        >
+          Idaisel<br />
+          <span class="font-display font-normal italic text-primary">Guevara</span>
+        </h1>
+        <p class="mt-8 max-w-2xl text-[1.125rem] font-light leading-[1.875rem] text-on-surface-variant md:mt-12">
+          Compro productos a proveedores. Si buscas un socio de confianza, hablemos.
+        </p>
+        <div class="mt-10 flex flex-wrap items-center gap-6 md:mt-12">
+          <a
+            href="#contacto"
+            class="inline-flex items-center justify-center rounded bg-primary-container px-8 py-3.5 text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-on-primary-container shadow-sm transition-all duration-300 hover:bg-primary focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-surface focus-visible:outline-none"
+          >
+            Contactar
+          </a>
+          <a
+            href="#servicios"
+            class="inline-flex items-center gap-2 px-6 py-3.5 text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-on-surface-variant transition-colors hover:text-on-surface focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-surface focus-visible:outline-none"
+          >
+            Ver criterios
+            <Icon name="lucide:arrow-down" class="h-4 w-4" aria-hidden="true" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Metric stamp -->
+      <div class="flex flex-col justify-end pt-12 lg:col-span-4 lg:pl-12 lg:pt-0">
+        <Card as="aside" aria-label="Liquidez directa">
+          <div class="flex items-baseline justify-between gap-4 pb-6">
+            <span class="font-display text-4xl text-on-surface">100%</span>
+            <span class="text-right text-[0.6875rem] font-semibold uppercase tracking-widest text-primary">
+              Liquidez directa
+            </span>
+          </div>
+          <p class="pt-4 text-[0.8125rem] font-normal leading-[1.375rem] text-on-surface-variant">
+            Transacciones comerciales transparentes, cumplimiento estricto de cronogramas y volumen continuo sin
+            intermediación.
+          </p>
+        </Card>
+      </div>
+    </div>
+  </section>
+</div>
