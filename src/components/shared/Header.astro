@@ -1,11 +1,15 @@
 ---
 import { Icon } from 'astro-icon/components';
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
+
+const lang = Astro.currentLocale as 'es' | 'en';
+const t = useTranslations(lang);
 ---
 <header class="w-full bg-surface-container-lowest px-6 py-4 flex items-center justify-between font-sans">
   
   <div class="shrink-0">
     <a href="/" class="text-on-surface text-xl md:text-2xl font-serif tracking-wide hover:opacity-80 transition-opacity">
-      Idaisel Guevara
+      {t('header.title')}  
     </a>
   </div>
 

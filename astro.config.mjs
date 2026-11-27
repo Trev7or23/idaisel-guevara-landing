@@ -6,6 +6,13 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
+  i18n: {
+    defaultLocale: "es",
+    locales: ["es", "en"],
+    routing: {
+      prefixDefaultLocale: false,
+    },
+  },
   site: "https://ym4rx.github.io",
   base: "/idaisel-guevara-landing/",
   integrations: [icon()],

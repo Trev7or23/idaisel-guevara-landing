@@ -1,3 +1,11 @@
+---
+
+import { getLangFromUrl, useTranslations } from '@i18n/utils';
+
+const lang = Astro.currentLocale as 'es' | 'en';
+const t = useTranslations(lang);
+---
+
 <footer class="relative w-full bg-[#0f0f0f] mt-20">
   <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
     <div class="shrink-0">
@@ -6,7 +14,7 @@
       </a>
     </div>
     <div class="text-sm text-gray-400 font-sans text-center md:text-right">
-      <p>&copy; 2026 Idaisel Guevara. Todos los derechos reservados.</p>
+      <p>&copy; 2026 {t('footer.rights')}</p>
     </div>
 
   </div>
