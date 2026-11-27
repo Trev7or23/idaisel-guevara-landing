@@ -1,11 +1,12 @@
 ---
 import { Icon } from 'astro-icon/components';
-import { getLangFromUrl, useTranslations } from '@i18n/utils';
+import { useTranslations } from '@i18n/utils';
 
 const lang = Astro.currentLocale as 'es' | 'en';
 const t = useTranslations(lang);
 ---
-<header class="w-full bg-surface-container-lowest px-6 py-4 flex items-center justify-between font-sans">
+
+<header class="w-full bg-[#0f0f0f] px-6 py-4 flex items-center justify-between font-sans border-b border-white/5">
   
   <div class="shrink-0">
     <a href="/" class="text-on-surface text-xl md:text-2xl font-serif tracking-wide hover:opacity-80 transition-opacity">
@@ -13,20 +14,27 @@ const t = useTranslations(lang);
     </a>
   </div>
 
+  <nav class="hidden md:flex items-center gap-8 text-sm tracking-widest text-gray-300 uppercase">
+    <a href="#servicios" class="hover:text-white transition-colors">Servicios</a>
+    <a href="#sobre-mi" class="hover:text-white transition-colors">Sobre mí</a>
+    <a href="#contacto" class="hover:text-white transition-colors">Contacto</a>
+  </nav>
+
   <div class="flex items-center gap-4">
-   
-    <div class="bg-surface-container-low p-1 rounded-full flex items-center border border-on-surface/5">
-      <button class="px-3 py-1 text-xs font-semibold rounded-full bg-primary-container text-on-primary-container transition-colors">
+    
+    <div class="bg-[#1a1a1a] p-1 rounded-full flex items-center border border-white/5">
+      <button class="px-3 py-1 text-xs font-semibold rounded-full bg-[#d4c4a8] text-[#1a1a1a] transition-colors">
         ES
       </button>
-      <button class="px-3 py-1 text-xs font-semibold rounded-full text-on-surface-variant hover:text-on-surface transition-colors">
+      <button class="px-3 py-1 text-xs font-semibold rounded-full text-gray-400 hover:text-white transition-colors">
         EN
       </button>
     </div>
 
-    <button class="bg-primary-container p-2 rounded-xl hover:bg-primary transition-colors group">
-      <Icon name="lucide:user" class="w-5 h-5 text-on-primary-container" />
+    <button class="bg-[#d4c4a8] p-2 rounded-xl hover:bg-[#c4b498] transition-colors group">
+      <Icon name="lucide:user" class="w-5 h-5 text-[#1a1a1a]" />
     </button>
 
   </div>
 </header>
+  
