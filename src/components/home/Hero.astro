@@ -50,7 +50,7 @@ const t = useTranslations(lang);
           class="font-display text-[3.25rem] font-normal leading-[1.02] tracking-[-0.03em] text-on-surface md:text-[5.5rem] lg:text-[7.25rem]"
         >
           {t('hero.name').split(' ')[0]}<br />
-          <span class="font-display font-normal italic text-primary">{t('hero.name').split(' ')[1]}</span>
+          <span class="font-display font-normal italic text-primary">{t('hero.name').split(' ').slice(-2).join(' ')}</span>
         </h1>
         <p class="mt-8 max-w-2xl text-[1.125rem] font-light leading-[1.875rem] text-on-surface-variant md:mt-12">
           {t('hero.info')}

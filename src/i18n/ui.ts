@@ -1,9 +1,9 @@
 export const ui = {
   es: {
     "header.title": "Idaisel Guevara",
-    "hero.bar": "Adquisiciones estratégicas · Dossier privado",
+    "hero.bar": "Adquisiciones estratégicas · Dossier Corporativo",
     "hero.bar.aside": "Ref. B2B / Suministros",
-    "hero.name": "Idaisel Guevara",
+    "hero.name": "IGA Importaciones LLC",
     "hero.info":
       "Compro productos a proveedores. Si buscas un socio de confianza, hablemos",
     "hero.contact-button": "Contactar",
@@ -15,9 +15,9 @@ export const ui = {
   },
   en: {
     "header.title": "Idaisel Guevara",
-    "hero.bar": "STRATEGIC SOURCING · PRIVATE DOSSIER",
+    "hero.bar": "STRATEGIC SOURCING · Corporative DOSSIER",
     "hero.bar.aside": "Ref. B2B / Suppliers",
-    "hero.name": "Idaisel Guevara",
+    "hero.name": "IGA Importaciones LLC",
     "hero.info":
       "I purchase products from suppliers. If you are looking for a trusted partner, let’s talk.",
     "hero.contact-button": "Get In Touch",
